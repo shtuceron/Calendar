@@ -1,0 +1,251 @@
+div.calendar {
+	position: absolute;
+	display: none;
+	color: #444;
+	width: 315px;
+	z-index: 9999;
+	margin: 0 auto;
+}
+
+div.calendar .todayBGColorCell {
+	background-color: #ddd !important;
+	border: 1px #cacaca solid !important;
+}
+
+div.calendar .selectedBGColorCell {
+	background-color: #ddd !important;
+	border: 1px #cacaca solid !important;
+}
+
+div.calendar > table.wrap {
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+}
+
+div.calendar td.top > div {
+	position: relative;
+	display: none;
+	top: 2px;
+	width: 0;
+	height: 0;
+	margin: 0 auto;
+	border-bottom: 20px solid #f3f3f3;
+	border-left: 15px solid transparent;
+	border-right: 15px solid transparent;
+}
+
+div.calendar td.bottom > div {
+	position: relative;
+	top: -1px;
+	width: 0;
+	height: 0;
+	margin: 0 auto;
+	border-top: 20px solid #f3f3f3;
+	border-left: 15px solid transparent;
+	border-right: 15px solid transparent;
+}
+
+div.calendar td.center {
+	padding: 0px;
+}
+
+div.calendar td.center > div {
+	border-radius: 2px;
+	border: 1px #e0e0e0 solid;
+	background-color: #f3f3f3;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+div.calendar div.header {
+	padding: 7px;
+	position: relative;
+}
+
+div.calendar div.header > input.prev {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	margin: 7px 0px 0px 12px;
+	background: url('../images/glyphicons-halflings.png') no-repeat -425px -68px;
+	width: 30px;
+	border: 0px;
+}
+
+div.calendar div.header > input.prev:hover {
+	cursor: pointer;
+}
+
+div.calendar div.header div.current {
+	text-align: center;
+}
+
+div.calendar div.header div.current ul {
+	margin: 0px;
+	display: inline-block;
+    *display: inline;
+    zoom: 1;
+	list-style-type: none;
+}
+
+div.calendar div.header div.current ul li {
+	float: left;
+}
+
+div.calendar div.header div.current ul li.month {
+	width: 80px;
+	height: 24px;
+	line-height: 24px;
+}
+
+div.calendar div.header div.current ul li.hms {
+	background: url('./../images/clock.png') no-repeat 50% 50%;
+	width: 24px;
+	height: 24px;
+	line-height: 24px;
+}
+
+div.calendar div.header div.current ul li.year {
+	width: 80px;
+	height: 24px;
+	line-height: 24px;
+}
+
+div.calendar div.header div.current ul li:hover {
+	cursor: pointer;
+}
+
+div.calendar div.header > input.next {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	margin: 7px 12px 0px 0px;
+	background: url('../images/glyphicons-halflings.png') no-repeat -449px -68px;
+	width: 30px;
+	border: 0px;
+}
+
+div.calendar div.header > input.next:hover {
+	cursor: pointer;
+}
+
+div.calendar div.months-content {
+	display: none;
+	margin-bottom: 5px;
+}
+
+div.calendar div.months-content table {
+	width: 100%;
+	border-collapse: separate;
+}
+
+div.calendar div.months-content td {
+	text-align: center;
+	padding: 4px;
+}
+
+div.calendar div.months-content td.month {
+	border: 1px #f3f3f3 solid;
+}
+
+div.calendar div.months-content td.month:hover {
+	cursor: pointer;
+	background-color: #ddd;
+	border: 1px #cacaca solid;
+}
+
+div.calendar div.hms-content {
+	display: none;
+	margin-bottom: 5px;
+}
+
+div.calendar div.hms-content table {
+	margin: 0 auto;
+	border-collapse: separate;
+}
+
+div.calendar div.hms-content td {
+	text-align: center;
+	padding: 4px;
+}
+
+div.calendar div.hms-content td.up-hours > input,
+div.calendar div.hms-content td.up-minutes > input,
+div.calendar div.hms-content td.up-seconds > input {
+	background: url('../images/glyphicons-halflings.png') no-repeat -278px -115px;
+	width: 30px;
+	border: 0px;
+}
+
+div.calendar div.hms-content td.dn-hours > input,
+div.calendar div.hms-content td.dn-minutes > input,
+div.calendar div.hms-content td.dn-seconds > input {
+	background: url('../images/glyphicons-halflings.png') no-repeat -304px -115px;
+	width: 30px;
+	border: 0px;
+}
+
+div.calendar div.hms-content td.up-hours > input:hover,
+div.calendar div.hms-content td.up-minutes > input:hover,
+div.calendar div.hms-content td.up-seconds > input:hover,
+div.calendar div.hms-content td.dn-hours > input:hover,
+div.calendar div.hms-content td.dn-minutes > input:hover,
+div.calendar div.hms-content td.dn-seconds > input:hover {
+	cursor: pointer;
+}
+
+div.calendar div.hms-content tr.digits {
+	color: #272727;
+	font-size: 28px;
+	font-family: "Geneva", "Tahoma", "Arial" sans-serif;
+	text-shadow: 1px 1px 1px #ccc;
+}
+
+div.calendar div.years-content {
+	display: none;
+	margin-bottom: 5px;
+}
+
+div.calendar div.years-content table {
+	width: 100%;
+	border-collapse: separate;
+}
+
+div.calendar div.years-content td {
+	text-align: center;
+	padding: 4px;
+}
+
+div.calendar div.years-content td.year {
+	border: 1px #f3f3f3 solid;
+}
+
+div.calendar div.years-content td.year:hover {
+	cursor: pointer;
+	background-color: #ddd;
+	border: 1px #cacaca solid;
+}
+
+div.calendar div.days-content {
+	
+}
+
+div.calendar div.days-content table {
+	width: 100%;
+	border-collapse: separate;
+}
+
+div.calendar div.days-content td {
+	text-align: center;
+	padding: 4px;
+}
+
+div.calendar div.days-content tbody td.day {
+	border: 1px #f3f3f3 solid;
+}
+
+div.calendar div.days-content tbody td.day:hover {
+	cursor: pointer;
+	background-color: #ddd;
+	border: 1px #cacaca solid;
+}
